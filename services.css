@@ -210,6 +210,27 @@
             transform: translateY(0);
         }
     }
+
+
+    
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
 /* Equipment Section */
 .equipment-section {
     padding: 80px 15px; /* Adjusted padding for smaller screens */
