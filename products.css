@@ -1,0 +1,532 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Adjusted text color for better readability */
+    background-color: #f5f5f5; /* Lighter background color */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif; /* Updated to Merriweather */
+    font-weight: bolder;
+    
+
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.4s ease;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #FED3D3 !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+.nav-item{
+    padding: 20px;
+}
+
+.navbar.scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.navbar.scrolled .navbar-nav .nav-link:hover {
+    color: maroon !important;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: #000 !important;
+}
+
+.dropdown-menu {
+    background-color: #343a40; /* Dark background for dropdown */
+    border: none; /* Remove default border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 0; /* Remove default padding */
+    margin-top: 0.5rem; /* Space below the dropdown toggle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    opacity: 0; /* Start hidden */
+    transform: translateY(-10px); /* Slide up effect */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-menu.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+}
+
+.dropdown-item {
+    font-weight: bold;
+    color: #f8f9fa; /* Light text color */
+    padding: 0.75rem 1.5rem; /* Padding for items */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+.dropdown-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a separator line */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight background on hover */
+    color: #f8f9fa; /* Keep text color light on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991px) {
+    #mainNavbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5); /* Add a translucent background */
+        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+        -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with older webkit browsers */
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #f8f9fa; /* Ensure the links are visible over the blurred background */
+    }
+
+    .navbar.scrolled {
+        backdrop-filter: none; /* Remove the blur effect when scrolled */
+        -webkit-backdrop-filter: none; /* Remove the blur effect for webkit browsers */
+    }
+    .navbar.scrolled .navbar-toggler{
+        background-color: maroon;
+        color: black;
+    }
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0.8), rgba(128, 0, 0, 0.7)), url('static/images/oilboom.jpg') no-repeat center center/cover;
+    height: 75vh; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Ensures text is centered */
+    position: relative;
+    padding: 0 20px
+}
+
+
+
+
+.hero-content {
+    max-width: 800px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px; 
+
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 15px;
+
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Increased font size */
+}
+
+
+
+
+.content-section {
+    padding: 60px 0;
+    background-color: #fff; /* Light background color */
+    color: #333; /* Text color */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Increased gap for better separation */
+}
+
+.content-text h2{
+    color: #a01010;
+}
+
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.content-row.reverse {
+    flex-direction: row-reverse; /* Reverses the order for alternating layout */
+}
+
+.content-text {
+    flex: 1 1 45%;
+    padding: 0 20px; /* Reduced padding for alignment */
+    text-align: justify;
+}
+
+.image-item {
+    flex: 1 1 45%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item.full-width {
+    flex-basis: 100%; /* Full width for the last image */
+    margin-top: 20px;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.image-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .content-row {
+        flex-direction: column; /* Stack on smaller screens */
+        text-align: center; /* Center text for a cleaner look */
+    }
+
+    .content-text,
+    .image-item {
+        flex: 1 1 100%; /* Make text and images full-width on smaller screens */
+        padding: 0 20px; /* Add padding for alignment on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-text {
+        padding: 0 15px; /* Reduce padding further for smaller screens */
+    }
+
+    .image-item {
+        margin-bottom: 20px;
+    }
+
+    .image-caption {
+        font-size: 0.8rem; /* Reduce font size for captions on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .content-section {
+        padding: 40px 0; /* Reduce padding for very small screens */
+    }
+
+    .content-text {
+        padding: 0 10px; /* Minimal padding on smallest screens */
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+
+    .image-caption {
+        font-size: 0.75rem; /* Smaller font for captions on mobile devices */
+    }
+}
+
+
+
+
+/* Base Styles for Animation */
+.slide-up, .fade-in, .bounce-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.bounce-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.6s cubic-bezier(.68, -0.55, .27, 1.55), opacity 0.6s ease;
+}
+
+/* Active state when in view */
+.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+/* Footer Section Styles */
+.footer-section {
+    background: linear-gradient(to right, rgba(91, 2, 2, 0.9), rgba(0, 0, 0, 0.8)), 
+    url('static/images/2.jpg') no-repeat center center/cover;
+    color: #fff;
+    background-attachment: fixed;
+    padding: 40px 0; /* Increased padding for more space */
+}
+
+.footer-logo {
+    width: 150px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.footer-addresses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.list-inline{
+    margin: 20px;
+}
+
+.address {
+    flex: 1;
+    text-align: left;
+    padding: 20px; /* Increased padding for better spacing */
+}
+
+.address strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.mail {
+    font-size: 0.875rem; 
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icon Styles */
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.socialContainer {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    border-radius: 50%;
+}
+
+.socialContainer:hover {
+    background-color: maroon;
+    transform: scale(1.2);
+}
+
+.socialSvg {
+    width: 16px;
+    height: 16px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .footer-section .col-md-3 {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+
+    .footer-addresses {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .address {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 20px; /* Maintain padding for better spacing */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .socialContainer {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialSvg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-title {
+        text-align: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .linkfooter {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .list-inline {
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 30px 0; /* Adjusted padding for smaller devices */
+    }
+
+    .footer-addresses {
+        text-align: center !important;
+    }
+
+    .address {
+        padding: 15px 0;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .linkfooter {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .list-inline {
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}

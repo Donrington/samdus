@@ -439,7 +439,7 @@ p, a, li, span {
     z-index: 1; /* Ensure button is above pseudo-elements */
     font-size: 17px; /* Font size for readability */
     border-radius: 6px; /* Rounded corners for button */
-    font-weight: 500; /* Semi-bold font weight */
+    font-weight: bolder; /* Semi-bold font weight */
     color: white; /* Text color matching main color */
     text-transform: uppercase; /* Uppercase text for a bold look */
     background-color: transparent; /* Transparent background initially */
@@ -843,7 +843,7 @@ p, a, li, span {
 .slider-track {
     display: flex;
     gap: 20px; /* Space between logos */
-    animation: scroll 30s linear infinite; /* Infinite scrolling animation */
+    animation: scroll 20s linear infinite; /* Infinite scrolling animation */
     width: calc(200% + 40px); /* Double width for continuous scrolling */
 }
 
@@ -977,18 +977,18 @@ p, a, li, span {
 
 
 
-
-/* General Styles */
+/* Footer Section Styles */
 .footer-section {
     background: linear-gradient(to right, rgba(91, 2, 2, 0.9), rgba(0, 0, 0, 0.8)), 
     url('static/images/2.jpg') no-repeat center center/cover;
     color: #fff;
-    background-attachment: fixed; /* Fixed background for parallax effect */
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Align content to the center */
+    background-attachment: fixed;
     padding: 40px 0; /* Increased padding for more space */
+}
+
+.footer-logo {
+    width: 150px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space below logo */
 }
 
 .footer-title {
@@ -996,21 +996,26 @@ p, a, li, span {
     text-transform: uppercase;
     margin-bottom: 1rem;
     position: relative;
-    text-align: left; /* Align text to the left by default */
+    text-align: left;
 }
 
 .footer-addresses {
     display: flex;
-    flex-direction: row; /* Align addresses vertically */
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     font-size: 0.875rem;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.list-inline{
+    margin:20px;
 }
 
 .address {
     flex: 1;
-    padding: 0; /* Adjust padding between addresses */
     text-align: left;
+    padding: 20px; /* Increased padding for better spacing */
 }
 
 .address strong {
@@ -1024,7 +1029,7 @@ p, a, li, span {
     height: 2px;
     background: #fff;
     position: absolute;
-    left: 0; /* Start underline from the left */
+    left: 0;
     bottom: -10px;
 }
 
@@ -1051,12 +1056,12 @@ p, a, li, span {
     text-decoration: underline;
 }
 
-/* Icon Container */
+/* Social Media Icon Styles */
 .social-icons {
     display: flex;
-    justify-content: flex-end; /* Aligns icons to the right */
-    gap: 15px; /* Spacing between icons */
-    flex-direction: row; /* Ensures horizontal alignment */
+    justify-content: flex-end;
+    gap: 15px;
+    flex-direction: row;
 }
 
 .socialContainer {
@@ -1090,7 +1095,7 @@ p, a, li, span {
     transition-duration: 0.3s;
 }
 
-/* Media Queries */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .footer-section .col-md-3 {
         text-align: center !important;
@@ -1098,14 +1103,15 @@ p, a, li, span {
     }
 
     .footer-addresses {
-        flex-direction: column; /* Stack addresses vertically on small screens */
-        text-align: center; /* Center align text for smaller screens */
+        flex-direction: column;
+        text-align: center;
     }
     
-    .address{
+    .address {
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
+        padding: 20px; /* Maintain padding for better spacing */
     }
 
     .social-icons {
@@ -1123,16 +1129,21 @@ p, a, li, span {
     }
 
     .footer-title {
-        text-align: center; /* Center align title on smaller screens */
+        text-align: center;
     }
 
     .footer-title::after {
-        left: 50%; /* Start underline from the center */
-        transform: translateX(-50%); /* Center the underline */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .linkfooter{
+    .linkfooter {
         text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .list-inline {
+        text-align: center;
         justify-content: center !important;
         align-items: center !important;
     }
@@ -1140,21 +1151,28 @@ p, a, li, span {
 
 @media (max-width: 576px) {
     .footer-section {
-        padding: 20px 0; /* Decrease padding for smaller devices */
+        padding: 30px 0; /* Adjusted padding for smaller devices */
     }
 
     .footer-addresses {
-        text-align: center !important; /* Center align text for smaller screens */
+        text-align: center !important;
     }
 
     .address {
-        padding: 10px 0;
+        padding: 15px 0;
         text-align: center !important;
         justify-content: center !important;
-        align-items: center !important; /* Reduce padding for smaller screens */
+        align-items: center !important;
     }
-    .linkfooter{
+
+    .linkfooter {
         text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .list-inline {
+        text-align: center;
         justify-content: center !important;
         align-items: center !important;
     }

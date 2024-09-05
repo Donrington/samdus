@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workboats - Samdus Oil and Gas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="products.css">
+    <style>
+       
+       .hero-section {
+        background: linear-gradient(to top left, rgba(0, 0, 0, 0.8), rgba(128, 0, 0, 0.7)), url('static/images/workboat2.webp') no-repeat center center/cover;
+        height: 75vh; /* Increased height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* Ensures text is centered */
+        position: relative;
+        padding: 0 20px;
+        background-attachment: fixed;
+    }
+
+    
+
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/images/workboat2.webp') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.contentequip{
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 40px;
+}
+
+
+
+/* Button Styles */
+.btn {
+    --color: maroon; /* Main color for button and hover effects */
+    font-family: inherit; /* Inherit font from parent */
+    display: inline-block; /* Display as inline-block to maintain size */
+    width: 12em; /* Increased width for better alignment */
+    height: 3.5em; /* Slightly increased height */
+    line-height: 2.8em; /* Adjust line height to center text vertically */
+    margin: 20px; /* Margins around the button */
+    position: relative; /* Position relative for absolute positioning of pseudo-elements */
+    cursor: pointer; /* Pointer cursor on hover */
+    overflow: hidden; /* Hide overflow for hover effects */
+    border: 2px solid  #f0f0f0; /* Border color matching main color */
+    transition: color 0.5s; /* Smooth color transition on hover */
+    z-index: 1; /* Ensure button is above pseudo-elements */
+    font-size: 17px; /* Font size for readability */
+    border-radius: 6px; /* Rounded corners for button */
+    font-weight: bolder; /* Semi-bold font weight */
+    color:  #f0f0f0; /* Text color matching main color */
+    text-transform: uppercase; /* Uppercase text for a bold look */
+    background-color: transparent; /* Transparent background initially */
+}
+
+.btn:before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning for controlled placement */
+    z-index: -1; /* Behind the button text */
+    background: var(--color); /* Background color matching main color */
+    height: 200px; /* Increased height for hover effect */
+    width: 200px; /* Increased width for hover effect */
+    border-radius: 50%; /* Circular shape for hover effect */
+    transition: all 0.7s; /* Smooth transition for pseudo-element movement */
+}
+
+.btn:hover {
+    color: #fff; /* White text color on hover */
+}
+
+.btn:before {
+    top: 100%; /* Start below the button */
+    left: 100%; /* Start to the right of the button */
+}
+
+.btn:hover:before {
+    top: -30px; /* Move up into view */
+    left: -30px; /* Move left into view */
+}
+
+.btn:active:before {
+    background: darkred; /* Darker shade on active state for contrast */
+    transition: background 0s; /* No transition for instant color change on active */
+}
+/* Investor Insights Section */
+.investor-insights-section {
+    padding: 60px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.investor-insights-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.investor-insights-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.investor-insights-content p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.investor-insights-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.investor-insights-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.investor-insights-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .content-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-text,
+    .image-item {
+        flex: 1 1 100%;
+        padding: 0 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-text {
+        padding: 0 15px;
+    }
+
+    .image-item {
+        margin-bottom: 20px;
+    }
+
+    .image-caption {
+        font-size: 0.8rem;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-section {
+        padding: 40px 0;
+    }
+
+    .content-text {
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .image-caption {
+        font-size: 0.75rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .investor-insights-content h2 {
+        font-size: 2rem;
+    }
+
+    .investor-insights-content p {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Samdus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                            <li><a class="dropdown-item" href="#">Oil Spill Response Equipment Supply</a></li>
+                            <li><a class="dropdown-item" href="#">Response Service</a></li>
+                            <li><a class="dropdown-item" href="#">Equipment Hire</a></li>
+                            <li><a class="dropdown-item" href="#">Personnel Support</a></li>
+                            <li>
+                            <a class="dropdown-item" href="#">Consultancy</a></li>
+                            <a class="dropdown-item" href="#">IMO Level Training</a></li>
+                            <a class="dropdown-item" href="#">Procurement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPrinciples" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            General Business Principles
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownPrinciples">
+                            <li><a class="dropdown-item" href="#">Oil Spill Response</a></li>
+                            <li><a class="dropdown-item" href="#">Response Services</a></li>
+                            <li><a class="dropdown-item" href="#">Equipment Hire</a></li>
+                            <li><a class="dropdown-item" href="#">Personnel Support</a></li>
+                            <li><a class="dropdown-item" href="#">Emmergency Preparedness</a></li>
+                            <li><a class="dropdown-item" href="#">Consultancy</a></li>
+                            <li><a class="dropdown-item" href="#">Procurement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>Workboats</h1>
+                <p>Explore our range of versatile and reliable workboats, designed for various maritime operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- POLLCAT Section -->
+                <div class="content-row">
+                    <div class="content-text slide-up">
+                        <h2>POLLCAT</h2>
+                        <p>The POLLCAT is a robust steel catamaran workboat equipped with a built-in oil mop system, making it ideal for rapid response and recovery during oil spill events. Featuring a clear rear deck, integrated oil storage, and a hydraulic crane, the POLLCAT is an extremely versatile vessel. Its twin engines allow for extended operation times, while additional skimmers such as the TERMINATOR can be used for enhanced recovery capabilities. The POLLCAT also boasts a large cruising range and substantial pumping capacity for recovered oil, ensuring it remains operational in polluted areas for extended periods.</p>
+                    </div>
+                    <div class="image-item fade-in">
+                        <img src="static/images/workboat.webp" alt="POLLCAT Workboat" class="hover-zoom">
+                        <p class="image-caption">POLLCAT Workboat - Designed for rapid response and versatile operations.</p>
+                    </div>
+                </div>
+
+                <!-- POLLCRAFT Section -->
+                <div class="content-row reverse">
+                    <div class="image-item fade-in">
+                        <img src="https://www.desmiro-clean.com/media/3yzdgd4t/desmi-pollcraft_2.jpg?width=640&height=448&format=webp&quality=80&v=1da4d3e6d555170" alt="POLLCRAFT Workboat" class="hover-zoom">
+                        <p class="image-caption">POLLCRAFT Workboat - A multipurpose vessel with excellent stability and flexibility.</p>
+                    </div>
+                    <div class="content-text slide-up">
+                        <h2>POLLCRAFT</h2>
+                        <p>The POLLCRAFT is a stable monohull workboat available in 10 or 12-meter lengths, providing a multipurpose platform for various marine operations. With a large, clear rear deck area and a hydraulic knuckle crane as standard, it is ideal for cleanup duties in ports, terminals, or harbors, and can handle more challenging tasks if necessary. The vessel offers a recovered oil capacity of 10m<sup>3</sup> and a pumping capacity of 30m<sup>3</sup>/hr, enhancing its versatility and operational scope.</p>
+                    </div>
+                </div>
+
+                <!-- POLLKITTEN Section -->
+                <div class="content-row">
+                    <div class="content-text slide-up">
+                        <h2>POLLKITTEN</h2>
+                        <p>The POLLKITTEN is the smallest vessel in our range, with a shallow draft perfect for sheltered terminal and harbor applications. Despite its size, it is equipped with a built-in oil mop system for rapid response to oil pollution. The POLLKITTEN has an oil recovery rate of up to 20m<sup>3</sup> per hour and a pumping rate of up to 30m<sup>3</sup> per hour. It also includes an option for a mounted knuckle crane and built-in storage for recovered oil, making it highly efficient for various cleanup operations.</p>
+                    </div>
+                    <div class="image-item fade-in">
+                        <img src="https://www.desmiro-clean.com/media/e4hl5q30/desmi-pollkitten-workboat_3.jpg?width=640&height=448&format=webp&quality=80&v=1da4d3e6d37b750" alt="POLLKITTEN Workboat" class="hover-zoom">
+                        <p class="image-caption">POLLKITTEN Workboat - Small but powerful, perfect for confined spaces and rapid response.</p>
+                    </div>
+                </div>
+
+                <!-- Aluminium Workboats Section -->
+                <div class="content-row reverse">
+                    <div class="image-item fade-in">
+                        <img src="static/images/workboat1.jpg" alt="Aluminium Workboats" class="hover-zoom">
+                        <p class="image-caption">Aluminium Workboats - Lightweight and versatile for various operations.</p>
+                    </div>
+                    <div class="content-text slide-up">
+                        <h2>Aluminium Workboats</h2>
+                        <p>In addition to our larger vessels, we offer a comprehensive range of smaller aluminium workboats. These vessels are ideal for a wide variety of harbor, inland, and coastal operations. Our range includes the Punt, Tiller, Tempest, Coastal, and Intensity models, available in sizes from 4.3m to 12.8m. A multitude of hull types, propulsion systems, and customization options such as wheelhouses, tow posts, and seating arrangements are available, ensuring we meet any customer specification or requirement.</p>
+                    </div>
+                </div>
+            </section>
+
+                <!-- Call to Action Section -->
+                 <div class="cta-section">
+                 <section class="">
+                <div class="content-row text-center mt-5 contentequip ">
+                    <h2>Ready to Equip Your Operations?</h2>
+                    <p>Contact us today to learn more about our range of workboats and how they can enhance your marine operations. Our team is ready to provide you with the best solutions for your needs.</p>
+                    <div class="btnlink">
+                        <a href="contact.html" class="btn cta-button mt-3">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+            <section class="content-section">
+                <!-- Additional Section - Investor Insights -->
+                <div class="container">
+                    <div class="content-wrapper">
+                <div class="content-row investor-insights">
+                    <div class="content-text slide-up">
+                        <h2>Investor Insights</h2>
+                        <p>Investing in Samdus' workboats means partnering with a leader in marine technology and oil spill response. Our vessels are built to last and designed for maximum efficiency, ensuring a high return on investment. As environmental regulations tighten and the need for effective marine solutions grows, now is the perfect time to invest in cutting-edge maritime technology. Join us in making a positive impact on marine safety and environmental protection.</p>
+                    </div>
+                    <div class="image-item fade-in">
+                        <img src="static/images/6.jpg" alt="Investor Insights" class="hover-zoom">
+                        <p class="image-caption">Join our mission to enhance marine safety and environmental protection.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <!-- Footer Section -->
+    <div class="footer-section">
+        <footer>
+            <div class="container">
+                <!-- Footer Content -->
+                <div class="row mt-5">
+                    <!-- Samdus Logo -->
+                    <div class="col-12 text-center mb-4">
+                        <img src="static/images/samdus-logo.png" alt="Samdus Logo" class="footer-logo">
+                    </div>
+    
+                    <!-- Address and Contact Information -->
+                    <div class="row mt-4 mb-4">
+                        <div class="footer-addresses col-md">
+                            <div class="address">
+                                <strong>Head Office:</strong><br>
+                                1st Floor, Imperial Plaza<br>
+                                129/131 Olu Obasanjo Road,<br>
+                                Port Harcourt, Rivers State, Nigeria<br>
+                                <a href="tel:+2348093932091" class="text-white">+234 809 393 2091</a>
+                            </div>
+                            <div class="address col-md">
+                                <strong>Lagos Office:</strong><br>
+                                5th Floor, God’s Grace Plaza<br>
+                                63 Allen Avenue, Ikeja, Lagos, Nigeria<br>
+                                <a href="tel:+2348093932091" class="text-white">+234 809 393 2091</a>
+                            </div>
+                            <div class="address col-md">
+                                <strong>Abuja Office:</strong><br>
+                                Suite D31C, Platinum Mega Mall<br>
+                                Jahi, Abuja, FCT, Nigeria<br>
+                                <a href="tel:+2348093931793" class="text-white">+234 809 393 1793</a>
+                            </div>
+                            <div class="address col-md">
+                                <p>Need Support?</p>
+                                <strong><p><a href="mailto:info@samdus.com" class="text-white mail">info@samdus.com</a></p></strong>
+                            </div>
+                        </div>
+                    
+                    </div>
+    
+                    <div class="row mt mb">
+                        <div class="col-md">
+                            <!-- Footer Links -->
+                            <ul class="list-inline mt-3">
+                                <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+                                <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+                                <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+                            </ul>
+                    </div>
+                    </div>
+                    <!-- Social Media Links and Copyright -->
+                    <div class="row mt-4 align-items-center">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="mt-4">&copy; 2024 Samdus Oil and Gas Limited. All rights reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="social-icons mt-4 d-flex justify-content-center justify-content-md-end">
+                                <a href="#" class="socialContainer containerOne me-2">
+                                    <svg class="socialSvg" viewBox="0 0 16 16">
+                                        <!-- Instagram SVG Path -->
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socialContainer containerTwo me-2">
+                                    <svg class="socialSvg" viewBox="0 0 24 24">
+                                        <!-- Twitter-X SVG Path -->
+                                        <image href="static/images/twitter-x2.svg" height="100%" width="100%" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="socialContainer containerThree me-2">
+                                    <svg class="socialSvg" viewBox="0 0 448 512">
+                                        <!-- LinkedIn SVG Path -->
+                                        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 1 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socialContainer containerFour">
+                                    <svg class="socialSvg" viewBox="0 0 16 16">
+                                        <!-- WhatsApp SVG Path -->
+                                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+</html>
