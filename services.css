@@ -228,9 +228,10 @@
     }
 
     .cta-section p {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
 }
+
 /* Equipment Section */
 .equipment-section {
     padding: 80px 15px; /* Adjusted padding for smaller screens */
@@ -388,7 +389,7 @@
 
 .cta-section p {
     font-size: 1.25rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 
