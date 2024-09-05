@@ -210,80 +210,143 @@
             transform: translateY(0);
         }
     }
+/* Equipment Section */
+.equipment-section {
+    padding: 80px 15px; /* Adjusted padding for smaller screens */
+    background-color: #fff;
+}
 
-    /* Equipment Section */
-    .equipment-section {
-        padding: 80px 0;
-        background-color: #fff;
-    }
+.equipment-card {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    flex-direction: row; /* Default flex direction for larger screens */
+}
 
+.equipment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.equipment-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.equipment-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.equipment-image:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.equipment-content {
+    flex: 2;
+    padding: 40px;
+    text-align: justify;
+    position: relative;
+}
+
+.equipment-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #a01010;
+}
+
+.equipment-content p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.equipment-content .btn {
+    background-color: #a01010;
+    color: #fff;
+    border-radius: 30px;
+    padding: 12px 25px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-decoration: none; /* Ensuring no underline on link buttons */
+}
+
+.equipment-content .btn:hover {
+    background-color: #fff;
+    color: #a01010;
+    border: 1px solid #a01010;
+    transform: scale(1.05);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) { /* Tablet screens */
     .equipment-card {
-        display: flex;
-        align-items: center;
-        background-color: #f8f9fa;
-        border-radius: 15px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        overflow: hidden;
-    }
-
-    .equipment-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .equipment-image {
-        flex: 1;
-        overflow: hidden;
-    }
-
-    .equipment-image img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .equipment-image:hover img {
-        transform: scale(1.1);
-        filter: brightness(0.8);
+        flex-direction: column; /* Stack content on top of the image */
+        text-align: center; /* Center text for readability */
     }
 
     .equipment-content {
-        flex: 2;
-        padding: 40px;
-        text-align: justify;
-        position: relative;
+        padding: 20px; /* Reduced padding for smaller screens */
     }
 
     .equipment-content h2 {
-        font-family: 'Merriweather', serif;
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-        color: #a01010;
+        font-size: 1.8rem; /* Smaller font size for headers */
     }
 
     .equipment-content p {
-        line-height: 1.8;
-        margin-bottom: 30px;
-        color: #555;
+        font-size: 1rem; /* Smaller font size for paragraph text */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+    .equipment-card {
+        flex-direction: column; /* Stack elements vertically */
+        margin-bottom: 20px; /* Reduced margin for smaller screens */
+    }
+
+    .equipment-content {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .equipment-content h2 {
+        font-size: 1.5rem; /* Further reduced font size for headers */
+    }
+
+    .equipment-content p {
+        font-size: 0.95rem; /* Adjust font size for better readability on mobile */
+        margin-bottom: 15px;
     }
 
     .equipment-content .btn {
-        background-color: #a01010;
-        color: #fff;
-        border-radius: 30px;
-        padding: 12px 25px;
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-        font-weight: bold;
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+        font-size: 1rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 576px) { /* Extra small mobile screens */
+    .equipment-content h2 {
+        font-size: 1.3rem; /* Smaller header font size for very small screens */
     }
 
-    .equipment-content .btn:hover {
-        background-color: #fff;
-        color: #a01010;
-        border: 1px solid #a01010;
-        transform: scale(1.05);
+    .equipment-content p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
     }
+
+    .equipment-content .btn {
+        width: 100%; /* Full-width button for better touch target */
+        padding: 12px; /* Adjust button padding */
+        font-size: 0.95rem; /* Smaller font size for buttons */
+    }
+}
 
 /* Call to Action Section */
 .cta-section {
