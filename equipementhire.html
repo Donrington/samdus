@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Response Services - Samdus Oil and Gas</title>
+    <title>Equipment Hire - Samdus Oil and Gas</title>
+    <!-- External CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- AOS Library CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-   <link rel="stylesheet" href="services.css">
-   <style>
-    /* General Styles */
+    <link rel="stylesheet" href="services.css">
+    <style>
+        /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #fff;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(128, 0, 0, 0.7)), url('static/images/oilresponse.jpg') no-repeat center center/cover;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(128, 0, 0, 0.6)), url('static/images/desmi-ro-tanker.webp') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -38,120 +38,87 @@ body {
     background-attachment: fixed;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
 /* Introduction Section */
 .intro-section {
     padding: 60px 0;
 }
 
-.intro-section .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.intro-section .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Services Details Section */
-.services-details {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-.service-detail {
-    margin-bottom: 40px;
-}
-
-.service-detail img {
+.intro-section img {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service-detail h3 {
-    font-size: 2rem;
+.intro-section h2 {
+    font-size: 2.5rem;
+    color: #a01010;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.intro-section .btn {
+    background-color: #a01010;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.intro-section .btn:hover {
+    background-color: #fff;
+    color: #a01010;
+    border: 2px solid #a01010;
+}
+
+/* Equipment Categories Section */
+.categories-section {
+    padding: 80px 0;
+}
+
+.category-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.category-card .card-body {
+    padding: 20px;
+}
+
+.category-card .card-title {
+    font-size: 1.8rem;
     color: #a01010;
     margin-bottom: 15px;
 }
 
-.service-detail p {
+.category-card .card-text {
     font-size: 1.1rem;
-    color: #555;
-}
-
-/* Case Studies Section */
-.case-studies-section {
-    padding: 60px 0;
-    background-color: #fff;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #333;
-}
-
-.case-studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.case-study-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.case-study-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.case-study-content {
-    padding: 20px;
-}
-
-.case-study-content h4 {
-    font-size: 1.5rem;
-    color: #a01010;
-    margin-bottom: 10px;
-}
-
-.case-study-content p {
-    font-size: 1rem;
     color: #555;
 }
 
 /* Call to Action Section */
 .cta-section {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/images/responseteam.jpg') no-repeat center center/cover !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('static/images/rotankcleaning.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 90px 20px;
     margin-top: 30px;
     position: relative;
-    background-attachment: fixed !important;
+    background-attachment: fixed;
 }
 
-
 .cta-section h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -160,46 +127,153 @@ body {
     margin-bottom: 30px;
 }
 
-.cta-section .btn-contact {
-    padding: 15px 40px;
-    font-size: 1.2rem;
+.cta-section .btn {
     background-color: #fff;
     color: #a01010;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    font-weight: bold;
 }
 
-.cta-section .btn-contact:hover {
-    background-color: #a01010;
+.cta-section .btn:hover {
+    background-color: transparent;
     color: #fff;
-    transform: scale(1.1);
+    border: 2px solid #fff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
+/* Media Queries */
+
+/* Medium Devices - Tablets and Large Phones */
+@media (max-width: 992px) {
+    .hero-section h1 {
         font-size: 2.5rem;
     }
 
-    .hero-content p {
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .intro-section h2 {
+        font-size: 2rem;
+    }
+
+    .intro-section p {
         font-size: 1rem;
     }
 
-    .service-detail h3 {
-        font-size: 1.5rem;
+    .categories-section .category-card .card-title {
+        font-size: 1.6rem;
     }
 
-    .case-study-content h4 {
-        font-size: 1.2rem;
+    .categories-section .category-card .card-text {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+
+    .cta-section .btn {
+        padding: 12px 25px;
     }
 }
 
-   </style>
+/* Small Devices - Mobile Phones */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .intro-section img {
+        width: 100%;
+    }
+
+    .intro-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-section p {
+        font-size: 0.9rem;
+    }
+
+    .categories-section .category-card {
+        flex-direction: column;
+    }
+
+    .categories-section .category-card img {
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .cta-section .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Extra Small Devices - Smaller Phones */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .intro-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-section p {
+        font-size: 0.8rem;
+    }
+
+    .categories-section .category-card .card-title {
+        font-size: 1.4rem;
+    }
+
+    .categories-section .category-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-section .btn {
+        padding: 8px 15px;
+    }
+}
+    </style>
 </head>
 <body>
 
-    <body>
-        <!-- Navbar --> <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Samdus</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -250,109 +324,98 @@ body {
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
-
-
     <section class="hero-section">
         <div class="hero-content">
-            <h1>Response Services</h1>
-            <p>Expert Solutions for Effective Oil Spill Management and Environmental Protection</p>
+            <h1 >Equipment Hire Services</h1>
+            <p >Reliable, High-Performance Equipment, Ready for Deployment.</p>
         </div>
     </section>
 
     <!-- Introduction Section -->
-    <section class="intro-section">
+    <section class="intro-section py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 fade-in">
-                    <h2>Comprehensive Oil Spill Response Services</h2>
-                    <p>At Samdus Oil and Gas, we understand the critical importance of rapid and efficient response in the event of an oil spill. Our specialized team is equipped with cutting-edge technology and industry expertise to manage oil spill incidents effectively, minimizing environmental impact and safeguarding your operations. Our response services are tailored to meet the unique challenges of each spill scenario, ensuring that every situation is handled with the utmost precision and care.</p>
+                <div class="col-md-6 fade-in equipment-content">
+                    <h2>Equipment Hire Solutions for Every Project</h2>
+                    <p>Samdus Oil and Gas offers an extensive range of high-performance equipment for hire, including oil skimmers, containment booms, and portable power packs. Our solutions ensure operational efficiency, safety, and compliance, tailored to the unique needs of your project.</p>
+                    <a href="#categories" class="btn mt-3 mb-3">Explore Our Equipment</a>
                 </div>
-                <div class="col-lg-6 fade-in">
-                    <img src="static/images/responseteam.jpg" alt="Oil Spill Response Team" class="img-fluid rounded shadow">
+                <div class="col-md-6">
+                    <img src="static/images/desmi-ro-tanker_1.webp" alt="Equipment Hire" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Services Details Section -->
-    <section class="services-details">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Service Detail 1 -->
-                <div class="col-md-6 service-detail fade-in">
-                    <img src="static/images/Dispersant-Neat-Sweep-deployment.jpg" alt="Containment Booms" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 service-detail fade-in">
-                    <h3>Immediate Containment and Recovery</h3>
-                    <p>Our team is equipped to deploy containment booms rapidly to control and contain oil spills, preventing further environmental damage. We utilize state-of-the-art skimmers to recover oil from the water surface efficiently, ensuring maximum recovery rates and minimal waste. Our response units are strategically positioned to respond promptly to any spill, reducing downtime and mitigating risks.</p>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <!-- Service Detail 2 -->
-                <div class="col-md-6 service-detail fade-in order-md-2">
-                    <img src="static/images/oilvacuumsystem.jpg" alt="Shoreline Cleanup" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 service-detail fade-in order-md-1">
-                    <h3>Shoreline and Coastal Cleanup</h3>
-                    <p>Our response services extend beyond containment to include comprehensive shoreline and coastal cleanup. We utilize advanced equipment and techniques to clean affected areas effectively, removing oil residues and restoring the natural environment. Our experts work closely with local authorities and environmental agencies to ensure all cleanup efforts are compliant with regulations and environmental standards.</p>
+ <!-- Equipment Categories Section -->
+ <section id="categories" class="categories-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Equipment Categories</h2>
+        <div class="row">
+            <!-- Category 1: Oil Skimmers -->
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+                <div class="card category-card shadow-sm">
+                    <a href="oilskimmers.html">
+                        <img src="static/images/oil-skimmer-desmi.webp" class="card-img-top" alt="Oil Skimmers">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Oil Skimmers</h3>
+                        <p class="card-text">Our oil skimmers offer efficient recovery of oil from water surfaces, available in various configurations including disc, mop, and weir types for different oil viscosities.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row align-items-center">
-                <!-- Service Detail 3 -->
-                <div class="col-md-6 service-detail fade-in">
-                    <img src="https://static.vecteezy.com/system/resources/previews/048/841/942/non_2x/team-engineers-inspecting-on-machine-with-smart-tablet-worker-works-at-heavy-machine-robot-arm-the-welding-machine-with-a-remote-system-in-an-industrial-factory-artificial-intelligence-concept-free-photo.jpg" alt="Emergency Training" class="img-fluid rounded shadow">
+            <!-- Category 2: Containment Booms -->
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+                <div class="card category-card shadow-sm">
+                    <a href="oilsboom.html">
+                        <img src="static/images/oilboom.jpg" class="card-img-top" alt="Containment Booms">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Containment Booms</h3>
+                        <p class="card-text">Our containment booms are designed to limit the spread of oil spills, effective in various environmental conditions, from calm waters to turbulent seas.</p>
+                    </div>
                 </div>
-                <div class="col-md-6 service-detail fade-in">
-                    <h3>Emergency Preparedness and Training</h3>
-                    <p>We believe that preparedness is key to effective oil spill response. Samdus Oil and Gas offers comprehensive training programs for your personnel, ensuring they are equipped with the knowledge and skills necessary to handle spill incidents confidently. Our training programs cover everything from initial response to advanced containment techniques, providing a robust framework for operational readiness.</p>
+            </div>
+
+            <!-- Category 3: Power Packs -->
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+                <div class="card category-card shadow-sm">
+                    <a href="powerpacks.html">
+                        <img src="static/images/desmi-power-pack.webp" class="card-img-top" alt="Power Packs">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Portable Power Packs</h3>
+                        <p class="card-text">Portable, compact, and powerful, our power packs provide the necessary energy for remote operations and oil spill recovery efforts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Vacuum Systems -->
+            <div class="col-md-6 d-flex align-items-stretch mb-4">
+                <div class="card category-card shadow-sm">
+                    <a href="vacuumsystem.html">
+                        <img src="static/images/oilvacuumsystem.jpg" class="card-img-top" alt="Vacuum Systems">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Vacuum Systems</h3>
+                        <p class="card-text">Our vacuum systems enable rapid recovery of spilled oil and liquids from both water and ground surfaces, reducing environmental impact efficiently.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Looking to Hire Equipment for Your Next Project?</h2>
+            <p>Contact our team to discuss your equipment needs, and we'll provide you with the best solution, ensuring your project is a success.</p>
+            <a href="contact.html" class="btn btn-lg ">Contact Us Today</a>
+        </div>
     </section>
-        <!-- Case Studies Section -->
-        <section class="case-studies-section">
-            <div class="container">
-                <h2 class="section-title">Case Studies</h2>
-                <div class="case-studies-grid">
-                    <!-- Case Study 1 -->
-                    <div class="case-study-card fade-in">
-                        <img src="https://static.vecteezy.com/system/resources/previews/046/253/346/non_2x/firefighting-activities-the-atmosphere-of-firefighters-putting-out-fires-free-photo.jpg" alt="Case Study 1" class="img-fluid rounded">
-                        <div class="case-study-content">
-                            <h4>Effective Response to Offshore Spill</h4>
-                            <p>Samdus Oil and Gas successfully managed an offshore spill in the Gulf of Guinea, deploying rapid response teams and advanced containment technology to minimize environmental impact and restore marine conditions.</p>
-                        </div>
-                    </div>
-                    <!-- Case Study 2 -->
-                    <div class="case-study-card fade-in">
-                        <img src="static/images/desmi-power-pack_24.png" alt="Case Study 2" class="img-fluid rounded">
-                        <div class="case-study-content">
-                            <h4>Coastal Cleanup Operation in Lagos</h4>
-                            <p>Our team conducted a comprehensive cleanup operation along the Lagos coastline, removing oil residues and rehabilitating affected areas, demonstrating our commitment to environmental stewardship and community safety.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     
-        <!-- Call to Action Section -->
-        <div class="cta-section">
-            <section class="">
-                <div class="container text-center">
-                    <h2>Partner with Us for Expert Oil Spill Response Services</h2>
-                    <p>Contact us today to learn how we can help you safeguard your operations and protect the environment with our comprehensive response services.</p>
-                    <a href="contact.html" class="btn-contact">Contact Us</a>
-                </div>
-            </section>
-        </div>
-        
-
-        
-
-
 <!-- Testimonials Section -->
 <section class="testimonials-section mb-4">
     <h2 class="section-title pb-3 pt-3">What Our Clients Say</h2>
@@ -394,8 +457,6 @@ body {
         </div>
     </div>
 </section>
-
-
 
 
    <!-- Footer Section -->
@@ -489,37 +550,15 @@ body {
 </div>
 
 
-    <!-- Include JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="services.js"></script>
-    <script>
-        // JavaScript for Fade-in Effect on Scroll
-document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observerOptions = {
-        threshold: 0.2
-    };
-
-    const fadeInOnScroll = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(fadeInOnScroll, observerOptions);
-
-    fadeElements.forEach(element => {
-        observer.observe(element);
+<!-- Bootstrap and AOS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="services.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
     });
-});
-
-    </script>
+</script>
 </body>
 </html>

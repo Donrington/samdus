@@ -428,6 +428,8 @@
 }
 
 
+
+
 /* Testimonials Section */
 .testimonials-section {
     background: #f5f5f5; /* Light grey background for the section */
@@ -509,6 +511,71 @@
         font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }
+
+/* General Padding and Alignment for Text Content */
+.expertise-section .expertise-list, 
+.equipment-content p, 
+.equipment-content h2 {
+    padding-left: 20px; /* Padding on the left for alignment */
+    padding-right: 20px; /* Padding on the right for alignment */
+    text-align: justify; /* Justifies the text, aligning both left and right edges */
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+.equipment-section .equipment-content {
+    padding: 20px 40px; /* Adds padding on both sides of the content */
+    line-height: 1.8; /* Improves readability by increasing line spacing */
+}
+
+/* Equipment Content Titles */
+.equipment-content h2 {
+    text-align: left; /* Aligns titles to the left */
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+ 
+}
+
+/* Expertise List Items */
+.expertise-list li {
+    margin-bottom: 15px;
+    text-align: justify; /* Aligns list content both left and right */
+}
+
+/* Container Alignment */
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.image-grid .image-large,
+.image-grid .image-medium,
+.image-grid .image-small {
+    padding: 0 15px; /* Ensures consistent padding between images */
+}
+
+/* Ensures the CTA Section and Text in Other Sections are Aligned */
+.cta-section h2, .cta-section p, .testimonials-section h2, .testimonials-section p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .expertise-section .expertise-list, 
+    .equipment-content p, 
+    .equipment-content h2 {
+        padding-left: 15px; /* Reduce padding on smaller screens */
+        padding-right: 15px;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 /* Footer Section Styles */
 .footer-section {
