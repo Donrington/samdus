@@ -3,100 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oil Skimmers - Samdus Oil and Gas</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover Samdus' advanced Oil Skimmers designed for efficient oil spill recovery. Our cutting-edge technology ensures maximum performance in various spill scenarios.">
-    <meta name="keywords" content="Oil Skimmers, Oil Spill Recovery, Samdus Oil and Gas, Environmental Protection, Spill Response Equipment">
-    <meta name="author" content="Samdus Oil and Gas">
-    <link rel="canonical" href="https://www.samdusoilandgas.com/oil-skimmers">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Oil Skimmers - Samdus Oil and Gas">
-    <meta property="og:description" content="Explore the latest Oil Skimmers from Samdus, engineered for optimal oil spill recovery and environmental safety.">
-    <meta property="og:image" content="static/images/oilskimmer.png">
-    <meta property="og:url" content="https://www.samdusoilandgas.com/oil-skimmers">
-    <meta property="og:type" content="website">
-    
-    <!-- CSS Libraries -->
+    <title>Consultancy Services - Samdus Oil and Gas</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="products.css" rel="stylesheet">
-    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="consultancy.css">
+    <link rel="stylesheet" href="services.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Internal CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #fff;
-        }
-
-        .hero-section {
-            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(128, 0, 0, 0.7)), url('static/images/oil-skimmer-desmi.webp') no-repeat center center/cover;
-            height: 75vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            background-attachment: fixed;
-        }
-
    
-
-        .content-section {
-            padding: 60px 0;
-        }
-
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .content-text {
-            padding: 20px;
-            text-align: justify;
-        }
-
-        .image-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .image-item img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-
-        .image-item:hover img {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-
-        .image-caption {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-        }
     </style>
 </head>
 <body>
+
+    
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Samdus</a>
@@ -116,10 +39,10 @@
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
-                            <li><a class="dropdown-item" href="#">Oil Spill Response Equipment Supply</a></li>
-                            <li><a class="dropdown-item" href="#">Response Service</a></li>
-                            <li><a class="dropdown-item" href="#">Equipment Hire</a></li>
-                            <li><a class="dropdown-item" href="#">Personnel Support</a></li>
+                            <li><a class="dropdown-item" href="oilspillresponse.html">Oil Spill Response Equipment Supply</a></li>
+                            <li><a class="dropdown-item" href="respservices.html">Response Service</a></li>
+                            <li><a class="dropdown-item" href="equipementhire.html">Equipment Hire</a></li>
+                            <li><a class="dropdown-item" href="personnelsupp.html">Personnel Support</a></li>
                             <li>
                             <a class="dropdown-item" href="#">Consultancy</a></li>
                             <a class="dropdown-item" href="#">IMO Level Training</a></li>
@@ -149,72 +72,139 @@
         </div>
     </nav>
     
+
     <!-- Hero Section -->
-    <section class="hero-section">
-    
-            <div class="hero-content">
-                <h1>Oil Skimmers</h1>
-                <p>Efficient and Reliable Solutions for Oil Spill Recovery</p>
-            </div>
- 
+
+    <section class="hero-section ">
+        <div class="hero-content mt-5">
+            <h1>Consultancy Services</h1>
+            <p>Expert Oil Spill Preparedness, Response Planning, and Environmental Compliance</p>
+        </div>
     </section>
 
-<!-- Content Section -->
-<section class="content-section">
-    <div class="container">
-        <div class="content-wrapper">
-            <!-- First Row: Text Left, Image Right -->
-            <div class="content-row">
-                <div class="content-text slide-up">
-                    <h2>Advanced Oil Skimmer Technology</h2>
-                    <p>At Samdus, our Oil Skimmers are engineered for optimal performance in oil spill recovery operations. Utilizing state-of-the-art technology, our skimmers efficiently separate oil from water, minimizing environmental impact and ensuring regulatory compliance. With a range of skimmer types, including disc, mop, weir, and brush skimmers, we provide tailored solutions to meet the specific needs of each spill scenario.</p>
+    <!-- About Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 fade-in">
+                    <h2>Why Samdus Consultancy?</h2>
+                    <p>At Samdus Oil and Gas, we offer consultancy services that help organizations prepare for, respond to, and recover from oil spill incidents. With years of industry experience, we bring unmatched expertise in oil spill management, environmental compliance, and risk mitigation. Our consultancy services are customized to meet the unique needs of your operations, ensuring that you meet regulatory standards while safeguarding the environment.</p>
                 </div>
-                <div class="image-item fade-in">
-                    <img src="static/images/desmi-belt-skimmer_2.webp" alt="Disc Oil Skimmer" class="hover-zoom">
-                    <p class="image-caption">Disc Oil Skimmer - Ideal for light to medium viscosity oils in calm waters.</p>
+                <div class="col-md-6 fade-in">
+                    <img src="static/images//Ghanas-Petroleum-Sector.jpg" alt="Consultancy" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Second Row: Image Left, Text Right -->
-            <div class="content-row reverse">
-                <div class="image-item fade-in">
-                    <img src="static/images/desmi-tarantula-xl.webp" alt="Weir Oil Skimmer" class="hover-zoom">
-                    <p class="image-caption">Weir Oil Skimmer - Perfect for large spills and rapid response operations.</p>
+    <!-- Services Section -->
+    <section class="services-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Consultancy Services</h2>
+            <div class="row">
+                <!-- Service 1: Preparedness -->
+     
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm p-4 rounded fade-in">
+                        <img src="static/images/Nigeria-crude-oil-2.webp" class="img-fluid rounded mb-3" alt="Response Planning">
+                        <h3>Response Strategy</h3>
+                        <p>Our experts craft response strategies that allow for immediate action during an oil spill incident. This includes equipment provisioning, personnel training, and risk assessment.</p>
+                    </div>
                 </div>
-                <div class="content-text slide-up">
-                    <h2>Innovative Design and Efficiency</h2>
-                    <p>Our skimmers are designed with innovation and efficiency in mind. The unique design allows for maximum recovery rates while maintaining durability in challenging environments. The lightweight construction ensures ease of deployment and operation, even in remote locations. With a focus on minimizing waste and maximizing recovery, our skimmers are the preferred choice for oil spill response teams worldwide.</p>
+                   
+                <!-- Service 2: Response Planning -->
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm p-4 rounded fade-in">
+                        <img src="static/images/emerprep.jpg" class="img-fluid rounded mb-3" alt="Preparedness">
+                        <h3>Preparedness Planning</h3>
+                        <p>Develop customized oil spill preparedness plans tailored to your operations. Our team provides comprehensive training and support to ensure readiness.</p>
+                    </div>
+                </div>
+                <!-- Service 3: Environmental Compliance -->
+                <div class="col-md-4">
+                    <div class="service-card shadow-sm p-4 rounded fade-in">
+                        <img src="static/images/oil-and-gas-job-1.jpg" class="img-fluid rounded mb-3" alt="Environmental Compliance">
+                        <h3>Environmental Compliance</h3>
+                        <p>We ensure your operations meet all relevant environmental regulations and standards. This includes audits, assessments, and ongoing compliance support.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Third Row: Text Left, Image Right -->
-            <div class="content-row">
-                <div class="content-text slide-up">
-                    <h2>Customizable Solutions for Every Spill</h2>
-                    <p>Samdus understands that every oil spill is unique, and so are the solutions required to address them. Our Oil Skimmers can be customized to fit the specific needs of your operation, whether it's offshore or nearshore, small-scale or large-scale. We offer a variety of skimmer configurations and materials, ensuring you have the right tools for any situation.</p>
+    <!-- Benefits Section -->
+    <section class="benefits-section py-5">
+        <div class="container fade-in ">
+            <h2 class="text-center mb-5">The Samdus Consultancy Advantage</h2>
+            <div class="row">
+                <div class="col-md- fade-in">
+                    <ul class="list-benefits">
+                        <li><strong>Industry Expertise:</strong> Benefit from decades of experience in oil spill management and environmental protection.</li>
+                        <li><strong>Tailored Solutions:</strong> Each consultancy service is designed to meet the specific challenges of your operations.</li>
+                        <li><strong>Regulatory Compliance:</strong> Stay ahead of evolving environmental laws and regulations with our expert guidance.</li>
+                        <li><strong>Risk Reduction:</strong> Our strategic planning helps reduce the risk of operational disruption and environmental damage.</li>
+                    </ul>
                 </div>
-                <div class="image-item fade-in">
-                    <img src="static/images/brush-oil-skimmer.webp" alt="Brush Oil Skimmer" class="hover-zoom">
-                    <p class="image-caption">Brush Oil Skimmer - Highly effective for recovering heavy and viscous oils.</p>
+                <div class="col-md-6 img2 fade-in">
+                    <img src="static/images/deploy2.jpg" alt="Risk Reduction" class="img-fluid rounded shadow-lg">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Fourth Row: Image Left, Text Right -->
-            <div class="content-row reverse">
-                <div class="image-item fade-in">
-                    <img src="static/images/seamop_low.webp" alt="Mop Oil Skimmer" class="hover-zoom">
-                    <p class="image-caption">Mop Oil Skimmer - Best suited for recovering oil in heavy debris environments.</p>
-                </div>
-                <div class="content-text slide-up">
-                    <h2>Training and Support</h2>
-                    <p>Beyond providing world-class equipment, Samdus offers comprehensive training and support to ensure your team is ready for any spill scenario. Our experts are available to conduct on-site training sessions, provide operational guidance, and assist with equipment maintenance. We are dedicated to helping you achieve the highest standards of spill response readiness.</p>
-                </div>
+    <!-- Call to Action Section -->
+    <section class="cta-section text-white">
+        <div class=" text-center fade-in ">
+            <h2 class="text-white">Need Consultancy for Oil Spill Management?</h2>
+            <p>Contact us today to learn more about how we can assist in developing robust oil spill preparedness and response plans tailored to your operations.</p>
+            <a href="contact.html" class="btn btn-cta"><b>Contact Us</b></a>
+        </div>
+    </section>
+
+
+    
+<!-- Testimonials Section -->
+<section class="testimonials-section mb-4">
+    <h2 class="section-title pb-3 pt-3">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card fade-in">
+            <div class="mb-4">
+                <img src="static/images/av4.jpg" alt="Client Avatar" class="testimonial-avatar">
+              </div>
+            <div class="testimonial-content">
+                <p>"Samdus has been an excellent partner in providing top-notch oil spill response equipment. Their dedication to quality and customer service is unmatched."</p>
+                <h4>Hassan</h4>
+                <p>Environmental Safety Manager, DESMI</p>
+            </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-card fade-in">
+            <div class="mb-4">
+                <img src="static/images/av3.webp" alt="Client Avatar" class="testimonial-avatar">
+              </div>
+            <div class="testimonial-content">
+                <p>"We trust Samdus for all our spill response needs. Their innovative solutions and prompt support have been invaluable to our operations."</p>
+                <h4>Ralph</h4>
+                <p>Operations Director, ABC Marine</p>
+            </div>
+        </div>
+
+        <!-- Additional Testimonial Cards... -->
+        <div class="testimonial-card  fade-in">
+      <div class="mb-4">
+        <img src="static/images/av1.webp" alt="Client Avatar" class="testimonial-avatar">
+      </div>
+            <div class="testimonial-content">
+                <p>"From initial inquiry to final delivery, Samdus exceeded our expectations. Their team is highly professional and responsive, and their equipment is of superior quality."</p>
+                <h4> Hilda</h4>
+                <p> Director, Safe Waters Initiative</p>
             </div>
         </div>
     </div>
 </section>
 
-   
     <!-- Footer Section -->
     <div class="footer-section">
         <footer>
@@ -314,14 +304,28 @@
             </div>
         </footer>
     </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="services.js"></script>
 
-    <!-- JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    <!-- Main JS -->
-    <script src="main.js"></script>
+<script>
+// Optional JavaScript for scroll animations or interactive effects
+    document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll('.service-card');
+    
+        // Add hover effects or scroll reveal animation
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('hover-effect');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('hover-effect');
+            });
+        });
+    });
+    </script>
 </body>
 </html>

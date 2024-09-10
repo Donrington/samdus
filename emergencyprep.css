@@ -1,0 +1,375 @@
+ /* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #a01010;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(128, 0, 0, 0.7)),url('static/images/emerprep.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+.emergprep {
+    margin-top: 95px;
+}
+
+/* About Section */
+.about-section img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Types of Drills Section */
+.drill-card img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.drill-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.drill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.drill-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #a01010;
+}
+
+/* Preparedness Section */
+.preparedness-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.preparedness-section ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.preparedness-section ul li strong {
+    color: #a01010;
+}
+
+.preparedness-section img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #a01010;
+    color: #fff;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-section .btn-cta {
+    background-color: #fff;
+    color: #a01010;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .btn-cta:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.3rem;
+    }
+
+    .about-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2.3rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+        background-attachment: scroll;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+
+    .drill-card h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .cta-section .btn-cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .drill-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-section .btn-cta {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .drill-card h3 {
+        font-size: 1rem;
+    }
+}
+
+
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 6px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  
+
+.back-to-top {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 6px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .back-to-top:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(247, 247, 247);
+    align-items: center;
+  }
+  
+  .back-to-top:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  .back-to-top::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: #333;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .back-to-top:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+
+  .btnway {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    align-items: center; /* Vertically center the button */
+    padding: 0; /* Optional: Adjust padding as needed */
+}
+  
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 40px; /* Smaller for mobile */
+        height: 40px;
+    }
+    .back-to-top:hover {
+        width: 100px; /* Smaller expand width on mobile */
+    }
+
+    
+  .btnway {
+    display: flex;
+    justify-content:  center; /* Align button to the right */
+    align-items: center; /* Vertically center the button */
+    padding: 0; /* Optional: Adjust padding as needed */
+}
+}
