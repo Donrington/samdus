@@ -174,17 +174,6 @@ body, html {
     padding: 0 60px;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-size: 2rem;
-    z-index: 2;
-    cursor: pointer;
-    animation: bounce 2s infinite;
-}
 
 /* Keyframes for Scroll Indicator */
 @keyframes bounce {
