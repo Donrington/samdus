@@ -1281,12 +1281,12 @@ p, a, li, span {
 }
 
 .navbar-brand {
-    width: 120px; /* Adjust width for mobile screens */
+    width: 110px; /* Adjust width for mobile screens */
     height: 40px;
 }
 
 .navbar.scrolled .navbar-brand{
-    width: 120px; /* Adjust width for mobile screens */
+    width: 110px; /* Adjust width for mobile screens */
     height: 40px;
 }
 
