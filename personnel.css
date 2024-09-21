@@ -342,7 +342,27 @@
         align-items: center; /* Vertically center the button */
         padding: 0; /* Optional: Adjust padding as needed */
     }
-      
+    @media (max-width: 991px) {
+        .navbar-brand {
+            width: 120px; /* Adjust width for mobile screens */
+            height: 40px;
+        }
+        
+        .navbar.scrolled .navbar-brand{
+            width: 120px; /* Adjust width for mobile screens */
+            height: 40px;
+        }
+        
+        
+        
+        .logo{  
+            text-align: center !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding-right: 60px;
+            
+        }
+    }
     
     @media (max-width: 768px) {
         .back-to-top {
