@@ -307,6 +307,14 @@ h2 {
         width: 100px; /* Smaller expand width on mobile */
     }
 
+    .logo{  
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 60px;
+        
+    }
+
     
   .btnway {
     display: flex;
@@ -315,3 +323,6 @@ h2 {
     padding: 0; /* Optional: Adjust padding as needed */
 }
 }
+
+
+

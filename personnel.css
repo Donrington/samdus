@@ -360,5 +360,65 @@
         align-items: center; /* Vertically center the button */
         padding: 0; /* Optional: Adjust padding as needed */
     }
+    .navbar-brand {
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
     }
     
+    .navbar.scrolled .navbar-brand{
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
+    
+    
+    
+    .logo{  
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 60px;
+        
+    }
+    }
+    
+    
+    
+  
+    
+
+    
+
+
+
+
+
+
+
+.logo{  
+text-align: center !important;
+justify-content: center !important;
+align-items: center !important;
+padding-right: 60px;
+
+}
+
+
+
+.navbar-brand {
+display: block; /* Ensure the brand occupies space */
+background: url("static/images/logo/samdus_white.png") no-repeat center center;
+background-size: contain; /* Ensure the image fits within the set dimensions */
+width: 150px; /* Set the width of the brand image */
+height: 50px; /* Set an appropriate height */
+text-indent: -9999px;
+}
+
+
+.navbar.scrolled .navbar-brand{
+display: block; /* Ensure the brand occupies space */
+background: url("static/images/logo/samdus\ trans.png") no-repeat center center;
+background-size: contain; /* Ensure the image fits within the set dimensions */
+width: 150px; /* Set the width of the brand image */
+height: 50px; /* Set an appropriate height */
+text-indent: -9999px;
+}

@@ -68,10 +68,24 @@ p {
 }
 
 .navbar-brand {
-    font-weight: bold;
-    color: #fff;
-    transition: color 0.4s ease;
+    display: block; /* Ensure the brand occupies space */
+    background: url("static/images/logo/samdus_white.png") no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the set dimensions */
+    width: 150px; /* Set the width of the brand image */
+    height: 50px; /* Set an appropriate height */
+    text-indent: -9999px;
 }
+
+
+.navbar.scrolled .navbar-brand{
+    display: block; /* Ensure the brand occupies space */
+    background: url("static/images/logo/samdus\ trans.png") no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the set dimensions */
+    width: 150px; /* Set the width of the brand image */
+    height: 50px; /* Set an appropriate height */
+    text-indent: -9999px;
+}
+
 
 .nav-item{
     padding: 20px;
@@ -134,8 +148,15 @@ p {
     }
 
     .navbar-brand {
-        font-size: 1.25rem;
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
     }
+
+    .navbar.scrolled .navbar-brand{
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
+
 
     .nav-link {
         font-size: 0.9rem;
@@ -143,6 +164,16 @@ p {
 }
 
 @media (max-width: 767px) {
+
+    .navbar-brand {
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
+
+    .navbar.scrolled .navbar-brand{
+        width: 120px; /* Adjust width for mobile screens */
+        height: 40px;
+    }
     .navbar-nav {
         text-align: center;
     }
@@ -676,7 +707,13 @@ p {
         flex-direction: column;
         text-align: center;
     }
-    
+    .logo{  
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 60px;
+        
+    }
     .address {
         text-align: center !important;
         justify-content: center !important;
@@ -735,6 +772,13 @@ p {
         align-items: center !important;
     }
 
+    .logo{  
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 60px;
+        
+    }
     .linkfooter {
         text-align: center !important;
         justify-content: center !important;
