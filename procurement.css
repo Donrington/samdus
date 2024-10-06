@@ -175,6 +175,10 @@
         .cta-section h2 {
             font-size: 1.8rem;
         }
+
+        .display-footer{
+            display: none;
+        }
     }
     
 
@@ -280,6 +284,10 @@
         
     }
    
+
+    .display-footer{
+        display: none;
+    }
     }
     
 

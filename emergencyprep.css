@@ -261,6 +261,9 @@ h2 {
     .drill-card h3 {
         font-size: 1rem;
     }
+    .display-footer{
+        display: none;
+    }
 }
 
 
@@ -390,6 +393,11 @@ h2 {
     width: 120px; /* Adjust width for mobile screens */
     height: 40px;
 }
+
+.display-footer{
+    display: none;
+}
+
 }
 
 

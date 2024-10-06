@@ -966,6 +966,10 @@
     align-items: center; /* Vertically center the button */
     padding: 0; /* Optional: Adjust padding as needed */
 }
+
+.display-footer{
+    display: none;
+}
 }
 
 

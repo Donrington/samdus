@@ -191,6 +191,10 @@ h2 {
         padding: 12px 25px;
         font-size: 1.1rem;
     }
+
+    .display-footer{
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -229,6 +233,10 @@ h2 {
     .cta-section .btn-cta {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+
+    .display-footer{
+        display: none;
     }
 }
 

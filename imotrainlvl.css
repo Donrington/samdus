@@ -166,6 +166,10 @@
             .cta-section h2 {
                 font-size: 1.8rem;
             }
+
+            .display-footer{
+                display: none;
+            }
         }
 
         
@@ -269,6 +273,10 @@
     align-items: center !important;
     padding-right: 60px;
     
+}
+
+.display-footer{
+    display: none;
 }
 }
 

@@ -169,6 +169,10 @@ p {
         background-color: maroon;
         color: black;
     }
+
+    .display-footer{
+        display: none;
+    }
 }
 
 

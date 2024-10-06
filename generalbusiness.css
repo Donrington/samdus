@@ -560,6 +560,10 @@ h1, h2 {
         justify-content: center !important;
         align-items: center !important;
     }
+
+    .display-footer{
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -611,6 +615,9 @@ h1, h2 {
         
     }
 
+    .display-footer{
+        display: none;
+    }
 }
 
 

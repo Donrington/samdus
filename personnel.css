@@ -141,6 +141,10 @@
         .image-large, .image-medium, .image-small {
             width: 100%;
         }
+
+        .display-footer{
+            display: none;
+        }
     }
     
     /* Image Hover Effect */
@@ -398,6 +402,10 @@
         align-items: center !important;
         padding-right: 60px;
         
+    }
+
+    .display-footer{
+        display: none;
     }
     }
     

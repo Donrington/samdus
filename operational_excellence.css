@@ -605,6 +605,9 @@ body {
         justify-content: center !important;
         align-items: center !important;
     }
+    .display-footer{
+        display: none;
+    }
 }
 
 
@@ -820,6 +823,10 @@ body {
     align-items: center !important;
     padding-right: 60px;
     
+}
+
+.display-footer{
+    display: none;
 }
 }
 
