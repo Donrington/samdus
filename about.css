@@ -754,6 +754,10 @@ p {
         justify-content: center !important;
         align-items: center !important;
     }
+
+    .display-footer{
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -789,5 +793,9 @@ p {
         text-align: center;
         justify-content: center !important;
         align-items: center !important;
+    }
+
+    .display-footer{
+        display: none;
     }
 }

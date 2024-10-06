@@ -726,9 +726,8 @@ p, a, li, span {
 .slide-up, .fade-in, .bounce-in {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.7s ease-out;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
 }
-
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -842,9 +841,8 @@ p, a, li, span {
 
 .slider-track {
     display: flex;
-    gap: 20px; /* Space between logos */
-    animation: scroll 20s linear infinite; /* Infinite scrolling animation */
-    width: calc(200% + 40px); /* Double width for continuous scrolling */
+    gap: 20px;
+    animation: scroll 40s linear infinite;
 }
 
 .partner-logo {
@@ -874,7 +872,7 @@ p, a, li, span {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* Move the track to the left by half its width */
+        transform: translateX(calc(-250px * 6)); /* Adjust based on the number of logos */
     }
 }
 
@@ -891,7 +889,7 @@ p, a, li, span {
 /* Testimonials Section */
 .testimonials-section {
     position: relative;
-    background-image: linear-gradient(to bottom right, rgba(128, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('static/images/back2.jpg');
+    background-color: #800000;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
@@ -1147,6 +1145,10 @@ p, a, li, span {
         justify-content: center !important;
         align-items: center !important;
     }
+
+    .display-footer{
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1195,6 +1197,10 @@ p, a, li, span {
         align-items: center !important;
         padding-right: 60px;
         
+    }
+
+    .display-footer{
+        display: none;
     }
 }
 
