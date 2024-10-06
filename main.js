@@ -29,17 +29,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const elementsToObserve = document.querySelectorAll('.slide-up, .fade-in, .bounce-in');
+    const observerOptions = {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Stop observing the element
+            }
+        });
+
+        // Disconnect observer if no elements are left
+        if (document.querySelectorAll('.slide-up:not(.active), .fade-in:not(.active), .bounce-in:not(.active)').length === 0) {
+            observer.disconnect();
+        }
+    }, observerOptions);
+
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const sliderTrack = document.querySelector('.slider-track');
-    
+    let isHovered = false;
+
     sliderTrack.addEventListener('mouseenter', () => {
-        sliderTrack.style.animationPlayState = 'paused'; // Pause animation on hover
+        isHovered = true;
+        sliderTrack.style.animationPlayState = 'paused';
     });
 
     sliderTrack.addEventListener('mouseleave', () => {
-        sliderTrack.style.animationPlayState = 'running'; // Resume animation on mouse leave
+        isHovered = false;
+        sliderTrack.style.animationPlayState = 'running';
     });
+
+    // Reduce the number of reflows by batching style changes
 });
+
 
 
     // Back-to-top button functionality
@@ -61,3 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: "smooth"
         });
     });
+
