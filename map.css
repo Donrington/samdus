@@ -110,14 +110,11 @@ h1, h2, h3 {
     font-weight: bolder;
 }
 
+
 /* Navbar Styles */
 .navbar {
     transition: background-color 0.4s ease, color 0.4s ease;
     background-color: transparent;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -136,7 +133,7 @@ h1, h2, h3 {
     transition: color 0.4s ease;
 }
 
-.nav-item {
+.nav-item{
     padding: 20px;
 }
 
@@ -158,36 +155,36 @@ h1, h2, h3 {
 }
 
 .dropdown-menu {
-    background-color: #343a40;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0;
-    margin-top: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: #343a40; /* Dark background for dropdown */
+    border: none; /* Remove default border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 0; /* Remove default padding */
+    margin-top: 0.5rem; /* Space below the dropdown toggle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    opacity: 0; /* Start hidden */
+    transform: translateY(-10px); /* Slide up effect */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .dropdown-menu.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
 }
 
 .dropdown-item {
     font-weight: bold;
-    color: #f8f9fa;
-    padding: 0.75rem 1.5rem;
-    transition: background-color 0.3s ease;
+    color: #f8f9fa; /* Light text color */
+    padding: 0.75rem 1.5rem; /* Padding for items */
+    transition: background-color 0.3s ease; /* Smooth background change */
 }
 
 .dropdown-item:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a separator line */
 }
 
 .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight background on hover */
+    color: #f8f9fa; /* Keep text color light on hover */
 }
 
 /* Mobile responsiveness */
@@ -215,21 +212,20 @@ h1, h2, h3 {
     }
 
     .navbar {
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.5); /* Add a translucent background */
+        backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+        -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with older webkit browsers */
     }
 
     .navbar-dark .navbar-nav .nav-link {
-        color: #f8f9fa;
+        color: #f8f9fa; /* Ensure the links are visible over the blurred background */
     }
 
     .navbar.scrolled {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        backdrop-filter: none; /* Remove the blur effect when scrolled */
+        -webkit-backdrop-filter: none; /* Remove the blur effect for webkit browsers */
     }
-    
-    .navbar.scrolled .navbar-toggler {
+    .navbar.scrolled .navbar-toggler{
         background-color: maroon;
         color: black;
     }
@@ -333,11 +329,7 @@ h1, h2, h3 {
             width: 100vw; /* Ensure it takes the full viewport width */
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 10px;
-        }
+      
 
         .screen {
             background: #690606;

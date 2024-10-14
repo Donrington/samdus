@@ -3,9 +3,9 @@ var layer = new ol.layer.Tile({
 });
 
 // Define coordinates for Rivers, Lagos, and Abuja Offices
-var rivers = ol.proj.transform([7.005413, 4.815648], 'EPSG:4326', 'EPSG:3857'); // Rivers (Head Office)
-var lagos = ol.proj.transform([3.348839, 6.602523], 'EPSG:4326', 'EPSG:3857'); // Lagos Office
-var abuja = ol.proj.transform([7.440021, 9.083339], 'EPSG:4326', 'EPSG:3857'); // Abuja Office (Accurate Coordinates)
+var rivers = ol.proj.transform([7.004335, 4.808319], 'EPSG:4326', 'EPSG:3857'); // Rivers (Head Office)
+var lagos = ol.proj.transform([3.3547320369434543, 6.633458462588541], 'EPSG:4326', 'EPSG:3857'); // Lagos Office
+var abuja = ol.proj.transform([ 7.442838965811058, 9.09470712793245], 'EPSG:4326', 'EPSG:3857'); // Abuja Office (Accurate Coordinates)
 
 // Create a view centered on Rivers
 var view = new ol.View({

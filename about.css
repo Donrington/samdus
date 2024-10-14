@@ -377,6 +377,10 @@ p {
     gap: 20px;
 }
 
+.image-caption{
+    color: #ff5c3b;
+}
+
 .image-card {
     position: relative;
     flex: 1;
