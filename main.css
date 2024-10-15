@@ -889,6 +889,7 @@ p, a, li, span {
 
 
 /* Testimonials Section */
+/* Testimonials Section with Background Patterns */
 .testimonials-section {
     position: relative;
     background-color: #800000;
@@ -897,6 +898,29 @@ p, a, li, span {
     color: #fff;
     padding: 100px 0;
 }
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.testimonials-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
 
 .testimonials-wrapper {
     display: flex;
