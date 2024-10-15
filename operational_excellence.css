@@ -385,6 +385,123 @@ body {
         font-size: 0.9rem; /* Smaller font size for text overlay */
     }
 }
+/* Terms of Service Section */
+.terms-section {
+    padding: 80px 0;
+    background-color: #F9F9F9; /* Light background to differentiate the section */
+}
+
+.terms-list {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.terms-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.terms-list li i {
+    color: #690606; /* Oxblood color to match the brand */
+    margin-right: 10px;
+}
+
+.terms-section .content-box {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff); /* Slight gradient for a clean, premium look */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.terms-section .content-box:hover {
+    transform: translateY(-5px);
+}
+
+.terms-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #B80000; /* Deep red to maintain consistency */
+    margin-bottom: 20px;
+}
+
+.terms-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section .btn {
+    background-color: #B80000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.terms-section .btn:hover {
+    background-color: #8F0000; /* Darker shade on hover */
+}
+
+.terms-section .image-grid {
+    margin-top: 30px;
+}
+
+.terms-section .image-grid .image-card-large {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 450px;
+}
+
+.terms-section .image-grid .image-card-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.terms-section .image-grid .image-card-large:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.terms-section .image-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+.terms-section .image-card-large:hover .image-overlay {
+    background: rgba(0, 0, 0, 0.9); /* Darker overlay on hover */
+}
+
+/* Responsive Adjustments for Terms Section */
+@media (max-width: 992px) {
+    .terms-section .image-grid {
+        margin-top: 20px;
+    }
+
+    .terms-section .image-grid .image-card-large {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .terms-section .image-card-large {
+        height: 300px;
+    }
+}
 
 
 /* CTA Section */
