@@ -75,8 +75,23 @@
     </section>
 
     <div class="container">
+        <section class="principle" data-aos="fade-up">
+            <div class="content">
+                <h2 class="pb-3">Safety Principles</h2>
+                <p>
+                    At Samdus Oil & Gas, safety is paramount in everything we do. Our Safety Principles are rooted in fostering a safety-first culture, where our employees, contractors, and partners prioritize health and safety above all else. We operate with strict adherence to safety regulations, implementing robust safety management systems that ensure zero harm to our people, assets, and the environment.
+                </p>
+                <p>
+                    We continuously assess risks, conduct thorough safety audits, and provide comprehensive training programs to empower our teams. From our oilfields to our offices, we are committed to achieving operational excellence with the highest safety standards. Through innovation and the use of advanced technologies, we proactively prevent incidents and ensure rapid response capabilities in case of emergencies.
+                </p>
+            </div>
+            <div class="image">
+                <img src="static/images/safety.webp" alt="Safety Principles">
+            </div>
+        </section>
+        
         <!-- Each section has detailed content and alternating layouts for images and text -->
-        <section class="principle" data-aos="fade-right">
+        <section class="principle" data-aos="fade-up">
             <div class="content">
                 <h2 class="pb-3">Sustainable Development</h2>
                 <p>Sustainable development at Samdus is central to our business strategy. We are committed to responsible environmental stewardship while promoting economic growth and social equity. Our projects leverage innovative technologies to minimize environmental impact and foster sustainable community development. We integrate sustainable practices across all our operations, aiming to reduce our carbon footprint, manage waste effectively, and conserve natural resources. Our commitment extends to advancing renewable energy projects, improving energy efficiency in our operations, and supporting biodiversity conservation efforts.</p>
@@ -87,7 +102,7 @@
             </div>
         </section>
         
-        <section class="principle" data-aos="fade-left">
+        <section class="principle" data-aos="fade-up">
             <div class="image">
                 <img src="static/images/res2.webp" alt="Corporate Responsibility">
             </div>
@@ -100,7 +115,7 @@
         
 
         </section>
-        <section class="principle" data-aos="fade-right">
+        <section class="principle" data-aos="fade-up">
             <div class="content">
                 <h2 class="pb-3">Business Integrity</h2>
                 <p>At Samdus, we believe that integrity is the bedrock of sustainable business success. Our commitment to business integrity means upholding the highest standards of honesty and ethical behavior in all our operations. We maintain a transparent governance structure that supports accountability and fairness. Our corporate policies ensure that all business dealings are conducted without compromise, and we rigorously enforce compliance with both internal codes and regulatory standards. By fostering a culture of integrity, we ensure that our business practices not only enhance profitability but also contribute to the broader goals of social and environmental responsibility.</p>
@@ -110,7 +125,7 @@
             </div>
         </section>
         
-        <section class="principle" data-aos="fade-left">
+        <section class="principle" data-aos="fade-up">
             <div class="image">
                 <img src="static/images/comm2.webp" alt="Community Engagement">
             </div>
@@ -120,7 +135,7 @@
             </div>
         </section>
         
-        <section class="principle" data-aos="fade-right">
+        <section class="principle" data-aos="fade-up">
             <div class="content">
                 <h2 class="pb-3">Cash Policies</h2>
                 <p>Our cash management policies are crafted to bolster financial stability and foster sustainable growth. At Samdus, we implement rigorous financial controls and reporting mechanisms to ensure effective cash flow management. Our strategies are designed to maximize liquidity while minimizing financial risks, allowing us to invest in innovation and growth opportunities. We also emphasize ethical investment practices that align with our corporate values, ensuring that our financial resources contribute positively to our environmental and social goals. These policies not only secure our financial footing but also support our long-term vision of industry leadership and global impact.</p>
@@ -270,18 +285,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Scroll indicator (for hero section)
 
 
-    // Change Navbar Style on Scroll
-window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('mainNavbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-  // Back-to-top button functionality
-  const backToTopBtn = document.querySelector(".back-to-top");
+// Back-to-top button functionality
+const backToTopBtn = document.querySelector(".back-to-top");
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 600) {
@@ -293,11 +298,22 @@ window.addEventListener("scroll", function () {
     }
 });
 
+
 backToTopBtn.addEventListener("click", function () {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
+});
+
+// Change Navbar Style on Scroll
+window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
  

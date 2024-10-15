@@ -225,55 +225,152 @@ h1, h2 {
     font-weight: bold;
 }
 
-
-.principle {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    align-items: center;
-    justify-content: space-between;
+.principle h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #3C1F1F; /* Dark Red */
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-.content, .image {
-    flex: 1;
-    padding: 20px;
+.principle h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #B80000; /* Oxblood */
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
-.content {
-    order: 2;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
+.principle p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
     text-align: justify;
 }
 
+/* Principle Section Styling */
+.principle {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #F7F3F0;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Content and Image Styling */
+.content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .image {
-    padding: 20px;
+    flex: 1;
     text-align: center;
 }
 
 .image img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Section Colors */
+.principle:nth-child(odd) {
+    background-color: #F3E7E7; /* Soft light red */
+}
+
+.principle:nth-child(even) {
+    background-color: #FFF5F0; /* Soft light beige */
+}
+
+/* Safety Principles Section */
+.principle.safety {
+    background-color: #F1F8F6; /* Light Greenish for Safety */
+    border-left: 5px solid #B80000; /* Highlight for importance */
+}
+
+.principle.safety .content h2 {
+    color: #B80000;
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(30px);
+    transition-property: opacity, transform;
+}
+
+[data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .principle {
         flex-direction: column;
+        padding: 20px;
     }
 
     .content, .image {
-        order: unset;
+        padding: 10px;
     }
 
     .content {
+        order: unset;
+    }
+
+    .image {
         padding-bottom: 20px;
     }
 }
-
 
 
 
