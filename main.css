@@ -845,7 +845,7 @@ p, a, li, span {
 
 .slider-track {
     display: flex;
-    gap: 20px;
+    gap: 80px;
     animation: scroll 40s linear infinite;
 }
 
