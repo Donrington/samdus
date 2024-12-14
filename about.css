@@ -303,7 +303,7 @@ p {
     --color: maroon; /* Main color for button and hover effects */
     font-family: inherit; /* Inherit font from parent */
     display: inline-block; /* Display as inline-block to maintain size */
-    width: 12em; /* Increased width for better alignment */
+     /* Increased width for better alignment */
     height: 3.5em; /* Slightly increased height */
     line-height: 2.8em; /* Adjust line height to center text vertically */
     margin: 20px; /* Margins around the button */
@@ -354,6 +354,8 @@ p {
 
 
 
+
+
 @media (max-width: 991px) {
     .btn {
         font-size: 0.9rem;
@@ -378,6 +380,10 @@ p {
     align-items: center;
     justify-content: center;
     text-align: justify;
+}
+
+.content-section h2{
+    text-align: center;
 }
 
 .content-box {
@@ -420,6 +426,10 @@ p {
 .image-card {
     position: relative;
     flex: 1;
+}
+
+.image-caption{
+    color: #fff;
 }
 
 .image-card img {

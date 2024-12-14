@@ -759,7 +759,7 @@ p, a, li, span {
     position: relative; /* Position relative to contain pseudo-elements */
     overflow: hidden; /* Hide overflow to keep curved shapes contained */
 }
-
+ 
 .achievements-section::before,
 .achievements-section::after {
     content: '';
@@ -888,118 +888,363 @@ p, a, li, span {
     }
 }
 
-
-
-/* Testimonials Section */
-/* Testimonials Section with Background Patterns */
-.testimonials-section {
-    position: relative;
-    background-color: #800000;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    padding: 100px 0;
-}
-
-.testimonials-section::before {
-    content: '';
+/* Parallax Bubbles */
+.bubble {
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.1);
+    bottom: -150px; /* Start below the section */
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
+    opacity: 0.6;
+    animation: float 20s linear infinite;
+    z-index: 0;
 }
 
-.testimonials-section::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
+/* Individual Bubble Sizes and Positions */
+.bubble1 {
+    width: 60px;
+    height: 60px;
+    left: 10%;
+    animation-duration: 25s;
+    animation-delay: 0s;
 }
 
-
-.testimonials-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.bubble2 {
+    width: 100px;
+    height: 100px;
+    left: 20%;
+    animation-duration: 35s;
+    animation-delay: 5s;
 }
 
-.testimonial-item {
-    flex: 1 1 30%;
-    max-width: 350px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-10px);
-}
-
-.testimonial-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.testimonial-img {
+.bubble3 {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid #e63946;
+    left: 35%;
+    animation-duration: 30s;
+    animation-delay: 2s;
 }
 
-.testimonial-text {
-    font-size: 1rem;
+.bubble4 {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 20s;
+    animation-delay: 10s;
+}
+
+.bubble5 {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 28s;
+    animation-delay: 3s;
+}
+
+.bubble6 {
+    width: 90px;
+    height: 90px;
+    left: 80%;
+    animation-duration: 32s;
+    animation-delay: 7s;
+}
+
+.bubble7 {
+    width: 40px;
+    height: 40px;
+    left: 15%;
+    animation-duration: 22s;
+    animation-delay: 4s;
+}
+
+.bubble8 {
+    width: 110px;
+    height: 110px;
+    left: 30%;
+    animation-duration: 38s;
+    animation-delay: 6s;
+}
+
+.bubble9 {
+    width: 55px;
+    height: 55px;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: 1s;
+}
+
+.bubble10 {
+    width: 75px;
+    height: 75px;
+    left: 70%;
+    animation-duration: 29s;
+    animation-delay: 8s;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-300px) translateX(50px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-600px) translateX(-50px) scale(1);
+        opacity: 0.6;
+    }
+}
+
+
+/* Our Values Section */
+.values-section {
+    position: relative;
+    color: #fff;
+    padding: 100px 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #800000, #4b0000); /* Gradient Background */
+}
+
+.values-background {
+    display: none; /* Hide the background div if it's no longer needed */
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+/* Values Wrapper */
+.values-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative; /* To ensure z-index works with bubbles */
+    z-index: 1; /* Ensure content is above bubbles */
+}
+
+/* Value Item */
+.value-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    width: calc(33.333% - 40px);
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon i {
+    font-size: 2.5rem; /* Adjust icon size as needed */
+    color: #ed858d; /* Icon color (adjust to match your design) */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.value-item:hover .value-icon i {
+    transform: scale(1.1);
+    color: #f1faee; /* Change color on hover if desired */
+}
+
+
+.value-title {
+    font-size: 1.5rem;
     margin-bottom: 15px;
+    color: #fff;
+}
+
+.value-description {
+    font-size: 1rem;
     color: #ddd;
 }
 
-.testimonial-author {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #fff;
+/* Parallax Bubbles */
+.bubble {
+    position: absolute;
+    bottom: -150px; /* Start below the section */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 20s linear infinite;
+    z-index: 0;
 }
 
-/* Responsive adjustments */
+/* Individual Bubble Sizes and Positions */
+.bubble1 {
+    width: 60px;
+    height: 60px;
+    left: 10%;
+    animation-duration: 25s;
+    animation-delay: 0s;
+}
+
+.bubble2 {
+    width: 100px;
+    height: 100px;
+    left: 20%;
+    animation-duration: 35s;
+    animation-delay: 5s;
+}
+
+.bubble3 {
+    width: 80px;
+    height: 80px;
+    left: 35%;
+    animation-duration: 30s;
+    animation-delay: 2s;
+}
+
+.bubble4 {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 20s;
+    animation-delay: 10s;
+}
+
+.bubble5 {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 28s;
+    animation-delay: 3s;
+}
+
+.bubble6 {
+    width: 90px;
+    height: 90px;
+    left: 80%;
+    animation-duration: 32s;
+    animation-delay: 7s;
+}
+
+.bubble7 {
+    width: 40px;
+    height: 40px;
+    left: 15%;
+    animation-duration: 22s;
+    animation-delay: 4s;
+}
+
+.bubble8 {
+    width: 110px;
+    height: 110px;
+    left: 30%;
+    animation-duration: 38s;
+    animation-delay: 6s;
+}
+
+.bubble9 {
+    width: 55px;
+    height: 55px;
+    left: 45%;
+    animation-duration: 24s;
+    animation-delay: 1s;
+}
+
+.bubble10 {
+    width: 75px;
+    height: 75px;
+    left: 70%;
+    animation-duration: 29s;
+    animation-delay: 8s;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-300px) translateX(50px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-600px) translateX(-50px) scale(1);
+        opacity: 0.6;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .value-item {
+        width: calc(50% - 40px);
+    }
+}
+
 @media (max-width: 768px) {
-    .testimonials-wrapper {
+    .values-wrapper {
         flex-direction: column;
         align-items: center;
     }
 
-    .testimonial-item {
-        max-width: 80%;
-        margin-bottom: 30px;
+    .value-item {
+        width: 80%;
     }
 }
 
 @media (max-width: 480px) {
-    .testimonial-item {
-        max-width: 90%;
-        padding: 20px;
+    .values-section {
+        padding: 60px 0;
     }
 
-    .testimonial-text {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .value-item {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .value-title {
+        font-size: 1.3rem;
+    }
+
+    .value-description {
         font-size: 0.9rem;
     }
-
-    .testimonial-author {
-        font-size: 0.8rem;
-    }
 }
+
+
 
 
 
