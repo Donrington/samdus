@@ -19,7 +19,7 @@ h2 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(128, 0, 0, 0.7)), url('static/images/training2.webp') !important;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(128, 0, 0, 0.7)), url('static/consult.jpg') !important;
     background-size: cover;
     background-position: center;
     height: 80vh;
